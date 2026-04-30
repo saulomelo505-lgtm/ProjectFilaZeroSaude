@@ -33,14 +33,17 @@ Uma plataforma simples e gratuita que:
 Amazon S3 — Hospedagem de site estático
 ### Backend e APIs
 API Gateway — Exposição dos endpoints REST
+
 AWS Lambda — Lógica de confirmação e cancelamento
 ### Banco de Dados
 Amazon DynamoDB — Armazenamento de consultas e pacientes
 ### Comunicação e Eventos
-Amazon SNS — Envio de SMS
+Amazon SNS — Envio de SMS 
+
 Amazon EventBridge — Disparo automático de lembretes
 ### Segurança
 AWS WAF — Proteção da API contra ataques
+
 Amazon VPC — Isolamento e segurança da infraestrutura
 
 
