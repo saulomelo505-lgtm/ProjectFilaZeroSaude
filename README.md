@@ -29,6 +29,7 @@ Uma plataforma simples e gratuita que:
 
 ### Serviços utilizados
 
+|---|---|---|
 | Amazon S3          | Hospedagem do site estático              |
 | API Gateway        | Exposição dos endpoints REST             |
 | AWS Lambda         | Lógica de confirmação/cancelamento       |
