@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.models import Consulta, Paciente
 from app.deperndecie import pegarSessão
+from sqlalchemy import Date, Time
 
 consulta_router = APIRouter(prefix="/consultas", tags=["consultas"])
 """
@@ -13,7 +14,7 @@ consulta_router = APIRouter(prefix="/consultas", tags=["consultas"])
 @consulta_router.get("/")  # rota.requisição("Caminho") -> decorator
 async def listar_consultas(session=Depends(pegarSessão)):
     """Lista todas as consultas cadastradas no sistema."""
-    consultas = session.query(Consulta).all()
+    consultas = session.query(Consulta).all() #busca todas as consultas no banco/ query(Consulta) -> obj de pesquina na tabela Consultas
     return [
         {
             "id": c.id,
@@ -24,7 +25,7 @@ async def listar_consultas(session=Depends(pegarSessão)):
             "horario": c.horario,
             "status": c.status
         }
-        for c in consultas
+        for c in consultas #para pegar todos os itens da tabela 
     ]
 
 
@@ -33,8 +34,8 @@ async def agendar_consulta(
     paciente_id: int,
     especialidade: str,
     unidade_saude: str,
-    data_consulta: str,
-    horario: str,
+    data_consulta: Date,
+    horario: Time,
     session=Depends(pegarSessão)
 ):
     """

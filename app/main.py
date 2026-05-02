@@ -18,7 +18,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-from app.Rotas.study_routes import consulta_router
+from app.Rotas.consult_routes import consulta_router
 from app.Rotas.user_routes import user_router
 # Rotas.study_routes --> na pasta Rotas no arquivo study_routes (importado a partir da pasta app/)
 app.include_router(consulta_router)
