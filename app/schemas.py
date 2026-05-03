@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
-
+from datetime import date, time
 
 # Schemas de Paciente
 class PacienteBase(BaseModel):
@@ -28,8 +28,8 @@ class PacienteResponse(PacienteBase):
 class ConsultaBase(BaseModel):
     especialidade: str       # ex: Cardiologia, Clínica Geral, Ortopedia
     unidade_saude: str       # Unidade Básica de Saúde (UBS)
-    data_consulta: str       # Formato: YYYY-MM-DD
-    horario: str             # Formato: HH:MM
+    data_consulta: date       # Formato: YYYY-MM-DD
+    horario: time             # Formato: HH:MM
 
 
 class ConsultaCreate(ConsultaBase):

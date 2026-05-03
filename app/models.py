@@ -26,12 +26,12 @@ class Paciente(Base):
     credencial = Column("credencial", Integer) # nível de acesso do usuário
     telefone = Column("telefone", String) # número de telefone para envio de lembretes (SMS/WhatsApp)
 
-    #def __init__(self, nome, email, senha, credencial=None, telefone=None):
-     #   self.nome = nome
-      #  self.email = email
-       # self.senha = senha
-        #self.credencial = credencial
-     #   self.telefone = telefone
+    def __init__(self, nome, email, senha, credencial=None, telefone=None):
+        self.nome = nome
+        self.email = email
+        self.senha = senha
+        self.credencial = credencial
+        self.telefone = telefone
 
 
 # Tabela: Consulta (id, paciente_id, especialidade, unidade_saude, data_consulta, horario, status)
@@ -48,14 +48,14 @@ class Consulta(Base):
     horario = Column("horario", Time) # Horário da consulta no formato HH:MM
     status = Column("status", String) # Status atual: pendente, confirmado ou cancelado
 
-     # O PROPRIO SQLALQHEMI DEFINE O TIPO DA ENTRADA 
 
-    #def __init__(self, paciente_id, especialidade, unidade_saude, data_consulta, horario, status="pendente"):
-     #   self.paciente_id = paciente_id
-     #   self.especialidade = especialidade
-     #   self.unidade_saude = unidade_saude
-     #   self.data_consulta = data_consulta
-     #   self.horario = horario
-     #   self.status = status
+
+    def __init__(self, paciente_id, especialidade, unidade_saude, data_consulta, horario, status="pendente"):
+        self.paciente_id = paciente_id
+        self.especialidade = especialidade
+        self.unidade_saude = unidade_saude
+        self.data_consulta = data_consulta
+        self.horario = horario
+        self.status = status
 
 # executa a criação dos metadados do banco (efetiva a criação das tabelas)

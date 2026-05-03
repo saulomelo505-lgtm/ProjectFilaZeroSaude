@@ -4,7 +4,6 @@ import uvicorn
 # Alternativa: uvicorn app.main:app --reload (direto no terminal)
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", reload=True)
-    # uvicorn.run() cria um servidor usando o Uvicorn
+    uvicorn.run("app.main:app", reload=True)    # uvicorn.run() cria um servidor usando o Uvicorn
     # main  -- nome do arquivo : app -- nome da variável que instanciou o FastAPI no arquivo main
     # reload=True -- recarrega automaticamente as alterações sem precisar reiniciar o servidor
