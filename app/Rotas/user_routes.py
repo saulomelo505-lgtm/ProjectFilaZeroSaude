@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.models import Paciente
-from app.deperndecie import pegarSessão
+from app.dependence import pegarSessão
 from app.Security.security import bcrypt_context
 from app.schemas import PacienteCreate
 

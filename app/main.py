@@ -5,7 +5,7 @@ from app.models import Base, db
 load_dotenv()
 
 Base.metadata.create_all(bind=db) # executa a criação dos metadados do banco/ cria ou ignora caso ja tenha 
-print(Base.metadata.tables.keys())
+
 
 app = FastAPI(
     title="Fila Zero Saúde",

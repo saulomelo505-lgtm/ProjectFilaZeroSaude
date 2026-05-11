@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.models import Consulta, Paciente
-from app.deperndecie import pegarSessão
+from app.dependence import pegarSessão
 #from sqlalchemy import Date, Time -> os dados não entram desse tipo (apenas compreensivel no sqlalchemy)
 from datetime import date, time 
 
@@ -36,7 +36,7 @@ async def agendar_consulta(
     especialidade: str,
     unidade_saude: str,
     data_consulta: date,
-    horario: date,
+    horario: time,
     session=Depends(pegarSessão)
 ):
     """
