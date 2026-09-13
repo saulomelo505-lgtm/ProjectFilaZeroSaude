@@ -1,7 +1,8 @@
 # Fila Zero Saúde
 
 ⚠️ **Aviso:** Este projeto ainda está em desenvolvimento (Work in Progress) e pode conter bugs ou recursos incompletos.
-Sistema de redução de faltas em consultas médicas públicas do SUS.
+
+### Sistema de redução de faltas em consultas médicas públicas do SUS.
 
 ## O Problema
 
